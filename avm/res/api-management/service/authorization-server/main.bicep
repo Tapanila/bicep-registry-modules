@@ -46,9 +46,10 @@ param defaultScope string = ''
 @description('Optional. Description of the authorization server. Can contain HTML formatting tags.')
 param serverDescription string = ''
 
-@description('Required. Form of an authorization grant, which the client uses to request the access token. - authorizationCode, implicit, resourceOwnerPassword, clientCredentials.')
+@description('Required. Form of an authorization grant, which the client uses to request the access token. - authorizationCode, authorizationCodeWithPkce, implicit, resourceOwnerPassword, clientCredentials.')
 @allowed([
   'authorizationCode'
+  'authorizationCodeWithPkce'
   'clientCredentials'
   'implicit'
   'resourceOwnerPassword'
