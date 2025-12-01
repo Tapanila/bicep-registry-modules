@@ -361,7 +361,7 @@ module service 'br/public:avm/res/api-management/service:<version>' = {
         clientSecret: '<clientSecret>'
         displayName: 'AuthServer1'
         grantTypes: [
-          'authorizationCode'
+          'authorizationCodeWithPkce'
         ]
         name: 'AuthServer1'
         tokenEndpoint: '<tokenEndpoint>'
@@ -601,7 +601,7 @@ module service 'br/public:avm/res/api-management/service:<version>' = {
           "clientSecret": "<clientSecret>",
           "displayName": "AuthServer1",
           "grantTypes": [
-            "authorizationCode"
+            "authorizationCodeWithPkce"
           ],
           "name": "AuthServer1",
           "tokenEndpoint": "<tokenEndpoint>"
@@ -863,7 +863,7 @@ param authorizationServers = [
     clientSecret: '<clientSecret>'
     displayName: 'AuthServer1'
     grantTypes: [
-      'authorizationCode'
+      'authorizationCodeWithPkce'
     ]
     name: 'AuthServer1'
     tokenEndpoint: '<tokenEndpoint>'
