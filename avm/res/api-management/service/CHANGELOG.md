@@ -6,7 +6,7 @@ The latest version of the changelog can be found [here](https://github.com/Azure
 
 ### Changes
 
-- added support for `authorizationCodeWithPkce` value for `authorizationServerType` parameter
+- added support for `authorizationCodeWithPkce` value for `authorizationServerType.grantTypes` parameter
 
 ### Breaking Changes
 
