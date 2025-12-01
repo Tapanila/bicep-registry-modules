@@ -2,6 +2,16 @@
 
 The latest version of the changelog can be found [here](https://github.com/Azure/bicep-registry-modules/blob/main/avm/res/api-management/service/CHANGELOG.md).
 
+## 0.12.1
+
+### Changes
+
+- added support for `authorizationCodeWithPkce` value for `authorizationServerType.grantTypes` parameter
+
+### Breaking Changes
+
+- None
+
 ## 0.12.0
 
 ### Changes

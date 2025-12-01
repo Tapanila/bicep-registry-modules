@@ -1,7 +1,7 @@
 # API Management Services `[Microsoft.ApiManagement/service]`
 
 > ⚠️THIS MODULE IS CURRENTLY ORPHANED.⚠️
->
+> 
 > - Only security and bug fixes are being handled by the AVM core team at present.
 > - If interested in becoming the module owner of this orphaned module (must be Microsoft FTE), please look for the related "orphaned module" GitHub issue [here](https://aka.ms/AVM/OrphanedModules)!
 
@@ -361,7 +361,7 @@ module service 'br/public:avm/res/api-management/service:<version>' = {
         clientSecret: '<clientSecret>'
         displayName: 'AuthServer1'
         grantTypes: [
-          'authorizationCode'
+          'authorizationCodeWithPkce'
         ]
         name: 'AuthServer1'
         tokenEndpoint: '<tokenEndpoint>'
@@ -601,7 +601,7 @@ module service 'br/public:avm/res/api-management/service:<version>' = {
           "clientSecret": "<clientSecret>",
           "displayName": "AuthServer1",
           "grantTypes": [
-            "authorizationCode"
+            "authorizationCodeWithPkce"
           ],
           "name": "AuthServer1",
           "tokenEndpoint": "<tokenEndpoint>"
@@ -863,7 +863,7 @@ param authorizationServers = [
     clientSecret: '<clientSecret>'
     displayName: 'AuthServer1'
     grantTypes: [
-      'authorizationCode'
+      'authorizationCodeWithPkce'
     ]
     name: 'AuthServer1'
     tokenEndpoint: '<tokenEndpoint>'
@@ -2785,7 +2785,7 @@ Authorization servers.
 | [`clientId`](#parameter-authorizationserversclientid) | securestring | Client or app ID registered with this authorization server. |
 | [`clientSecret`](#parameter-authorizationserversclientsecret) | securestring | Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value. |
 | [`displayName`](#parameter-authorizationserversdisplayname) | string | API Management Service Authorization Servers name. Must be 1 to 50 characters long. |
-| [`grantTypes`](#parameter-authorizationserversgranttypes) | array | Form of an authorization grant, which the client uses to request the access token. - authorizationCode, implicit, resourceOwnerPassword, clientCredentials. |
+| [`grantTypes`](#parameter-authorizationserversgranttypes) | array | Form of an authorization grant, which the client uses to request the access token. - authorizationCode, authorizationCodeWithPkce, implicit, resourceOwnerPassword, clientCredentials. |
 | [`name`](#parameter-authorizationserversname) | string | Identifier of the authorization server. |
 
 **Optional parameters**
@@ -2834,7 +2834,7 @@ API Management Service Authorization Servers name. Must be 1 to 50 characters lo
 
 ### Parameter: `authorizationServers.grantTypes`
 
-Form of an authorization grant, which the client uses to request the access token. - authorizationCode, implicit, resourceOwnerPassword, clientCredentials.
+Form of an authorization grant, which the client uses to request the access token. - authorizationCode, authorizationCodeWithPkce, implicit, resourceOwnerPassword, clientCredentials.
 
 - Required: Yes
 - Type: array
@@ -2842,6 +2842,7 @@ Form of an authorization grant, which the client uses to request the access toke
   ```Bicep
   [
     'authorizationCode'
+    'authorizationCodeWithPkce'
     'clientCredentials'
     'implicit'
     'resourceOwnerPassword'
